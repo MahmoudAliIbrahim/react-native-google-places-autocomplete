@@ -57,12 +57,11 @@ const defaultStyles = {
   listViewContainer: {
     flex: 1,
     position: 'absolute',
-    backgroundColor: colors.gray_light,
     height: Dimensions.get('window').height * 0.25,
     width: Dimensions.get('window').width * 0.70,
     borderRadius: 2,
     // ios
-    shadowColor: colors.main_background_dark,
+    shadowColor: '#000000',
     shadowOpacity: 0.3,
     shadowOffset: { width: 3, height: 3 },
     shadowRadius: 4,
