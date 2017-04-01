@@ -58,7 +58,6 @@ const defaultStyles = {
     flex: 1,
     position: 'absolute',
     height: Dimensions.get('window').height * 0.25,
-    width: Dimensions.get('window').width * 0.70,
     borderRadius: 2,
     // ios
     shadowColor: '#000000',
@@ -766,7 +765,7 @@ const GooglePlacesAutocomplete = React.createClass({
           />
           {this._renderRightButton()}
         </View>
-        <View style={styles.listViewContainer}>
+        <View style={defaultStyles.listViewContainer}>
         {this._getListView()}
         {this.props.children}
         </View>
