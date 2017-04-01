@@ -54,6 +54,21 @@ const defaultStyles = {
     backgroundColor: '#FFFFFF',
   },
   powered: {},
+  listViewContainer: {
+    flex: 1,
+    position: 'absolute',
+    backgroundColor: colors.gray_light,
+    height: Dimensions.get('window').height * 0.25,
+    width: Dimensions.get('window').width * 0.70,
+    borderRadius: 2,
+    // ios
+    shadowColor: colors.main_background_dark,
+    shadowOpacity: 0.3,
+    shadowOffset: { width: 3, height: 3 },
+    shadowRadius: 4,
+    // Android
+    elevation: 8,
+  },
   listView: {
     // flex: 1,
   },
@@ -752,8 +767,10 @@ const GooglePlacesAutocomplete = React.createClass({
           />
           {this._renderRightButton()}
         </View>
+        <View style={styles.listViewContainer}>
         {this._getListView()}
         {this.props.children}
+        </View>
       </View>
     );
   },
